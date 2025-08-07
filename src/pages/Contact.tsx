@@ -33,15 +33,36 @@ const Contact = () => {
             return;
         }
 
-        const { error } = await supabase.from('contacts').insert([formData]);
+        // Insert into Supabase table
+        const { error: insertError } = await supabase.from('contacts').insert([formData]);
 
-        if (error) {
+        if (insertError) {
             toast({
                 variant: "destructive",
                 title: "Submission Failed",
-                description: "Something went wrong. Please try again later.",
+                description: "Something went wrong saving your message. Please try again later.",
             });
-        } else {
+            return;
+        }
+
+        // Call your notify-email Edge function
+        try {
+            const response = await fetch(import.meta.env.VITE_NOTIFY_EMAIL_FUNCTION_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to send notification email");
+            }
+
             toast({
                 title: "Message Sent!",
                 description: "Thank you for your message. I'll get back to you soon.",
@@ -53,8 +74,15 @@ const Contact = () => {
                 subject: '',
                 message: ''
             });
+        } catch (error) {
+            toast({
+                variant: "destructive",
+                title: "Email Notification Failed",
+                description: "Your message was saved but the notification email could not be sent: " + JSON.stringify(error),
+            });
         }
     };
+
 
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
