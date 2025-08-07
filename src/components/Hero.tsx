@@ -20,7 +20,7 @@ const Hero = () => {
                             I build scalable systems—from frontend interfaces and backend APIs to data pipelines and cloud platforms. With experience at Dell, IBM, Telekom, and ExxonMobil, I specialize in end-to-end solutions that deliver real business value. Want to know how I may help your project?
                             Check out my <a href="/resume" className="underline hover:text-white transition-colors">resume</a>.
                         </p>
-                        <a href="/contact">
+                        <a href="/react-portfolio/contact">
                             <Button variant="secondary" size="lg" className="font-semibold">
                                 Get In Touch
                             </Button>

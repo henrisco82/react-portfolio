@@ -30,12 +30,12 @@ const Index = () => {
                                     Product-minded engineer with full-stack and data expertise. I build scalable systems—from frontend interfaces and backend APIs to data pipelines and cloud platforms.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                                    <a href="/about">
+                                    <a href="/react-portfolio/about">
                                         <Button variant="secondary" size="lg" className="font-semibold w-full sm:w-auto">
                                             About Me
                                         </Button>
                                     </a>
-                                    <a href="/contact">
+                                    <a href="/react-portfolio/contact">
                                         <Button variant="outline" size="lg" className="font-semibold w-full sm:w-auto border-white text-white hover:bg-white hover:text-primary">
                                             Get In Touch
                                         </Button>

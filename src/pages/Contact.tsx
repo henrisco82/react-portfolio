@@ -8,6 +8,7 @@ import { Textarea } from '../components/ui/textarea';
 import { Label } from '../components/ui/label';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { supabase } from '../lib/superbaseClient';
 import { useToast } from '../hooks/use-toast';
 import profileImage from '../assets/profile.jpg';
 
@@ -20,10 +21,9 @@ const Contact = () => {
     });
     const { toast } = useToast();
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Simple form validation
         if (!formData.name || !formData.email || !formData.message) {
             toast({
                 variant: "destructive",
@@ -33,20 +33,29 @@ const Contact = () => {
             return;
         }
 
-        // Simulate form submission
-        toast({
-            title: "Message Sent!",
-            description: "Thank you for your message. I'll get back to you soon.",
-        });
+        const { error } = await supabase.from('contacts').insert([formData]);
 
-        // Reset form
-        setFormData({
-            name: '',
-            email: '',
-            subject: '',
-            message: ''
-        });
+        if (error) {
+            toast({
+                variant: "destructive",
+                title: "Submission Failed",
+                description: "Something went wrong. Please try again later.",
+            });
+        } else {
+            toast({
+                title: "Message Sent!",
+                description: "Thank you for your message. I'll get back to you soon.",
+            });
+
+            setFormData({
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
+            });
+        }
     };
+
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;

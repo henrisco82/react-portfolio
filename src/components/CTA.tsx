@@ -23,14 +23,14 @@ const CTA = () => {
                             henry.unah@gmail.com
                         </a>{' '}
                         or use the{' '}
-                        <a href="#contact" className="underline hover:text-white transition-colors">
+                        <a href="/react-portfolio/contact" className="underline hover:text-white transition-colors">
                             form on the contact page
                         </a>.
                     </p>
                 </div>
 
 
-                <a href="/contact">
+                <a href="/react-portfolio/contact">
                     <Button variant="secondary" size="lg" className="font-semibold">
                         Let's Talk
                     </Button>

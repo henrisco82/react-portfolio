@@ -43,7 +43,7 @@ const Skills = () => {
                     <p className="text-muted-foreground text-lg leading-relaxed">
                         I have more than 5 years' experience building rich web applications for clients all over the world.
                         Below is a quick overview of my main technical skill sets and tools I use. Want to find out more about my experience?
-                        <a href="/resume" className="text-primary hover:underline"> Check out my online resume</a>.
+                        <a href="/react-portfolio/resume" className="text-primary hover:underline"> Check out my online resume</a>.
                     </p>
                 </div>
 
