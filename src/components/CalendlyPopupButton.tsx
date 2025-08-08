@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { PopupButton } from 'react-calendly';
 
 const CalendlyPopupButton = () => {
     const [rootEl, setRootEl] = useState<HTMLElement | null>(null);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const root = document.getElementById('root');
         if (root) setRootEl(root);
     }, []);
