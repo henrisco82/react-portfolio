@@ -2,10 +2,14 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
-import { MapPin, Mail, Phone } from 'lucide-react';
+import { MapPin, Mail, Phone, Download } from 'lucide-react';
+import { Button } from '../components/ui/button';
 import profileImage from '../assets/profile.jpg';
+import { useDownloadResume } from '../hooks/useDownloadResume';
 
 const Resume = () => {
+    const { mutate: downloadResume, isPending } = useDownloadResume();
+
     const experiences = [
         {
             title: "Data Engineer",
@@ -102,10 +106,15 @@ const Resume = () => {
                             </div>
                         </div>
 
-                        {/* <Button variant="secondary" size="lg" className="font-semibold">
+                        <Button
+                            variant="secondary"
+                            size="lg" className="font-semibold"
+                            onClick={() => downloadResume()}
+                            disabled={isPending}
+                        >
                             <Download className="mr-2" size={16} />
-                            Download PDF
-                        </Button> */}
+                            {isPending ? 'Downloading...' : 'Download Resume'}
+                        </Button>
                     </div>
                 </div>
             </section>
