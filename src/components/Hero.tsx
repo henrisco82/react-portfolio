@@ -18,9 +18,9 @@ const Hero = () => {
                         <p className="text-lg mb-6 leading-relaxed">
                             Product-minded engineer with full-stack and data expertise.
                             I build scalable systems—from frontend interfaces and backend APIs to data pipelines and cloud platforms. With experience at Dell, IBM, Telekom, and ExxonMobil, I specialize in end-to-end solutions that deliver real business value. Want to know how I may help your project?
-                            Check out my <a href="/resume" className="underline hover:text-white transition-colors">resume</a>.
+                            Check out my <a href="react-portfolio/resume" className="underline hover:text-white transition-colors">resume</a>.
                         </p>
-                        <a href="/react-portfolio/contact">
+                        <a href="react-portfolio/contact">
                             <Button variant="secondary" size="lg" className="font-semibold">
                                 Get In Touch
                             </Button>
