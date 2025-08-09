@@ -11,7 +11,6 @@ import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { supabase } from '../lib/superbaseClient';
 import { useToast } from '../hooks/use-toast';
 import profileImage from '../assets/profile.jpg';
-import CalendlyPopupButton from '../components/CalendlyPopupButton';
 
 
 const Contact = () => {
@@ -272,9 +271,6 @@ const Contact = () => {
                                             <span className="text-muted-foreground">Time Zone:</span>
                                             <span className="font-medium">EST (UTC-5)</span>
                                         </div>
-                                    </div>
-                                    <div className="w-full">
-                                        <CalendlyPopupButton />
                                     </div>
                                 </CardContent>
                             </Card>
