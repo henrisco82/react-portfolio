@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 export default function Projects() {
     const [filter, setFilter] = useState("All");
 
-    const filters = ["All", "Angular", "React", "Python/Django", "Ruby/Rails", "PHP"];
+    const filters = ["All", "Angular", "React", "Python/FastAPI", "Node.js", "Java/Spring"];
 
     const filteredProjects =
         filter === "All"
@@ -17,7 +17,7 @@ export default function Projects() {
             : projects.filter((p) => p.category.includes(filter));
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen flex flex-col">
             <Header />
             {/* Project Header */}
             <section className="bg-primary text-primary-foreground py-16">

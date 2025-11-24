@@ -1,9 +1,9 @@
 const Footer = () => {
     return (
-        <footer className="bg-secondary text-secondary-foreground py-4">
+        <footer className="bg-secondary text-secondary-foreground py-4 mt-auto">
             <div className="container mx-auto px-4 text-center">
                 <p className="text-sm">
-                    Copyright &copy;{' '}
+                    Copyright ©{' '}
                     <a
                         href="https://www.henryunah.com/"
                         target="_blank"
@@ -15,6 +15,7 @@ const Footer = () => {
                 </p>
             </div>
         </footer>
+
     );
 };
 

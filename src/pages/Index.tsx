@@ -5,9 +5,9 @@ import profileImage from '../assets/profile.jpg';
 
 const Index = () => {
     return (
-        <div className="min-h-screen">
+        <div className="flex flex-col min-h-screen">
             <Header />
-            <main>
+            <main className="flex-1">
                 {/* Landing Hero Section */}
                 <section className="bg-primary text-primary-foreground py-20 min-h-[80vh] flex items-center">
                     <div className="container mx-auto px-4">
