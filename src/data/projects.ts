@@ -1,3 +1,12 @@
+// src/data/projects.ts
+
+import GitHubFinderImg from "../assets/GitHubFinder.png";
+import ClientPanelImg from "../assets/ClientPanel.png";
+import GameHubImg from "../assets/GameHub.png";
+import ProStoreImg from "../assets/ProStore.png";
+import ProshopImg from "../assets/Proshop.png";
+import SupportPortalImg from "../assets/SupportPortal.png";
+
 export interface Project {
   id: string;
   company: string;
@@ -12,42 +21,41 @@ export const projects: Project[] = [
     company: "GitHub Finder",
     title: "Find GitHub Profiles",
     category: ["React"],
-    image: "./src/assets/GitHubFinder.png",
+    image: GitHubFinderImg,
   },
   {
     id: "ClientPanel",
     company: "Client Panel",
     title: "Client Management System",
     category: ["Angular"],
-    image: "./src/assets/ClientPanel.png",
+    image: ClientPanelImg,
   },
   {
     id: "GameHub",
     company: "Game Hub",
     title: "Web Portal for Games",
     category: ["React"],
-    image: "./src/assets/GameHub.png",
+    image: GameHubImg,
   },
   {
     id: "ProStore",
     company: "ProStore",
     title: "E Commerce Website",
     category: ["React", "Next.js"],
-    image: "./src/assets/ProStore.png",
+    image: ProStoreImg,
   },
   {
     id: "Proshop",
     company: "Proshop",
     title: "E Commerce Website",
     category: ["React", "Node.js", "Express", "MongoDB"],
-    image: "./src/assets/Proshop.png",
+    image: ProshopImg,
   },
- 
   {
     id: "Support Portal",
     company: "Support Portal",
     title: "Customer Support System",
     category: ["Angular", "Java", "Spring"],
-    image: "./src/assets/SupportPortal.png",
+    image: SupportPortalImg,
   }
 ];
