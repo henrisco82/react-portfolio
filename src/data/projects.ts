@@ -28,8 +28,8 @@ export const projects: Project[] = [
     image: GitHubFinderImg,
     description: "A responsive web application that allows users to search for GitHub profiles and view detailed information about developers. Features include user profile display, repository listings, follower/following counts, and direct links to GitHub profiles. Built with modern React practices including hooks and context API.",
     techStack: ["React", "TypeScript", "Tailwind CSS", "GitHub API", "Axios"],
-    githubUrl: "https://github.com/yourusername/github-finder",
-    demoUrl: "https://yourusername.github.io/github-finder",
+    githubUrl: "https://github.com/henrisco82/github-finder",
+    demoUrl: "https://github-finder-flame-gamma.vercel.app",
   },
   {
     id: "ClientPanel",
@@ -39,8 +39,8 @@ export const projects: Project[] = [
     image: ClientPanelImg,
     description: "A comprehensive client management dashboard built with Angular. Features include client registration, profile management, appointment scheduling, and reporting capabilities. Designed for businesses to efficiently manage their client relationships and track interactions.",
     techStack: ["Angular", "TypeScript", "RxJS", "Angular Material", "Firebase"],
-    githubUrl: "https://github.com/yourusername/client-panel",
-    demoUrl: "https://yourusername.github.io/client-panel",
+    githubUrl: "https://github.com/henrisco82/client-panel",
+    demoUrl: "https://clientpanelprod-4f03d.web.app/",
   },
   {
     id: "GameHub",
@@ -50,8 +50,8 @@ export const projects: Project[] = [
     image: GameHubImg,
     description: "An interactive gaming portal featuring multiple browser-based games with user authentication, score tracking, and social features. Includes classic games like Tetris, Snake, and memory games with responsive design and smooth animations.",
     techStack: ["React", "JavaScript", "CSS3", "HTML5 Canvas", "Local Storage"],
-    githubUrl: "https://github.com/yourusername/game-hub",
-    demoUrl: "https://yourusername.github.io/game-hub",
+    githubUrl: "https://github.com/henrisco82/gamehub",
+    demoUrl: "https://gamehub-henrisco82.vercel.app",
   },
   {
     id: "ProStore",
@@ -61,8 +61,8 @@ export const projects: Project[] = [
     image: ProStoreImg,
     description: "A full-featured e-commerce platform built with Next.js featuring product catalogs, shopping cart functionality, user authentication, and payment processing. Includes admin dashboard for inventory management and order tracking.",
     techStack: ["Next.js", "React", "TypeScript", "Stripe API", "MongoDB", "Tailwind CSS"],
-    githubUrl: "https://github.com/yourusername/prostore",
-    demoUrl: "https://yourusername.github.io/prostore",
+    githubUrl: "https://github.com/henrisco82/prostore",
+    demoUrl: "https://prostore-umber.vercel.app",
   },
   {
     id: "Proshop",
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     image: ProshopImg,
     description: "A complete e-commerce solution with full-stack implementation. Features include user authentication, product management, order processing, payment integration, and admin controls. Built with the MERN stack for scalability and performance.",
     techStack: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "PayPal API", "Bootstrap"],
-    githubUrl: "https://github.com/yourusername/proshop",
+    githubUrl: "https://github.com/henrisco82/proshop-v2",
     demoUrl: "https://yourusername.github.io/proshop",
   },
   {
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     image: SupportPortalImg,
     description: "A comprehensive customer support ticketing system with both frontend and backend components. Features include ticket creation, assignment, status tracking, knowledge base, and customer portal. Designed for efficient customer service operations.",
     techStack: ["Angular", "Java", "Spring Boot", "MySQL", "JPA", "WebSocket", "JWT"],
-    githubUrl: "https://github.com/yourusername/support-portal",
+    githubUrl: "https://github.com/henrisco82/supportPortal",
     demoUrl: "https://yourusername.github.io/support-portal",
   }
 ];
