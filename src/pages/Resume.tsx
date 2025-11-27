@@ -57,7 +57,7 @@ const Resume = () => {
         },
         {
             degree: "Bachelor of Science in Computer Science",
-            school: "University of Technology",
+            school: "University of Calabar",
             period: "2009 - 2013",
             description: "Specialized in software engineering and web development. Completed thesis on a result processing management system."
         }

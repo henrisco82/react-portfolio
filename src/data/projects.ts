@@ -4,7 +4,7 @@ import GitHubFinderImg from "../assets/GitHubFinder.png";
 import ClientPanelImg from "../assets/ClientPanel.png";
 import GameHubImg from "../assets/GameHub.png";
 import ProStoreImg from "../assets/ProStore.png";
-import ProshopImg from "../assets/Proshop.png";
+import ProshopImg from "../assets/ProShop.png";
 import SupportPortalImg from "../assets/SupportPortal.png";
 
 export interface Project {
