@@ -17,14 +17,7 @@ const Schedule = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
+    visible: { opacity: 1, y: 0 },
   };
 
   const benefits = [
@@ -74,7 +67,11 @@ const Schedule = () => {
               animate="visible"
               className="max-w-4xl mx-auto"
             >
-              <motion.div variants={itemVariants} className="text-center mb-12">
+              <motion.div
+                variants={itemVariants}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-12"
+              >
                 <h2 className="text-3xl font-bold mb-6">Ready to Connect?</h2>
                 <p className="text-lg text-gray-600 mb-6">
                   Whether you're looking for project consultation, mentorship, technical guidance, or just want to discuss
@@ -86,10 +83,11 @@ const Schedule = () => {
               </motion.div>
 
               {/* Benefits Grid */}
-              <motion.div
-                variants={itemVariants}
-                className="grid md:grid-cols-3 gap-8 mb-12"
-              >
+                <motion.div
+                 variants={itemVariants}
+                 transition={{ duration: 0.6, delay: 0.4 }}
+                 className="grid md:grid-cols-3 gap-8 mb-12"
+               >
                 {benefits.map((benefit, index) => (
                   <motion.div
                     key={index}
