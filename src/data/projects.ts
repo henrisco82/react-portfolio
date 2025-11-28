@@ -84,6 +84,6 @@ export const projects: Project[] = [
     description: "A comprehensive customer support ticketing system with both frontend and backend components. Features include ticket creation, assignment, status tracking, knowledge base, and customer portal. Designed for efficient customer service operations.",
     techStack: ["Angular", "Java", "Spring Boot", "MySQL", "JPA", "WebSocket", "JWT"],
     githubUrl: "https://github.com/henrisco82/supportPortal",
-    demoUrl: "https://yourusername.github.io/support-portal",
+    demoUrl: "https://.github.io/support-portal",
   }
 ];
