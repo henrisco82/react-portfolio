@@ -8,7 +8,8 @@ import { Textarea } from '../components/ui/textarea';
 import { Label } from '../components/ui/label';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
-import { supabase } from '../lib/superbaseClient';
+import { db } from '../lib/firebaseClient';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { useToast } from '../hooks/use-toast';
 import profileImage from '../assets/profile.jpg';
 
@@ -34,26 +35,31 @@ const Contact = () => {
             return;
         }
 
-        // Insert into Supabase table
-        const { error } = await supabase.from('contacts').insert([formData]);
-
-        if (error) {
-            toast({
-                variant: "destructive",
-                title: "Submission Failed",
-                description: "Something went wrong saving your message. Please try again later.",
+        try {
+            // Add document to Firestore 'contacts' collection
+            await addDoc(collection(db, 'contacts'), {
+                ...formData,
+                createdAt: serverTimestamp(),
             });
-        } else {
+
             toast({
                 title: "Message Sent!",
                 description: "Thank you for your message. I'll get back to you soon.",
             });
 
+            // Reset form
             setFormData({
                 name: '',
                 email: '',
                 subject: '',
                 message: ''
+            });
+        } catch (error) {
+            console.error('Error adding document: ', error);
+            toast({
+                variant: "destructive",
+                title: "Submission Failed",
+                description: "Something went wrong saving your message. Please try again later.",
             });
         }
     };
