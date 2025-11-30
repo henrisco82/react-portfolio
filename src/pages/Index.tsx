@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import { Button } from '../components/ui/button';
 import Footer from '../components/Footer';
+import TestimonialSlider from '../components/TestimonialSlider';
 import profileImage from '../assets/profile.jpg';
 
 const Index = () => {
@@ -65,6 +66,9 @@ const Index = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* Testimonials Section */}
+                <TestimonialSlider />
             </main>
             <Footer />
         </div>
